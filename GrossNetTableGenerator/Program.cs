@@ -145,9 +145,9 @@ namespace GrossNet
                 "MonthlyNet",
                 "SpecialNet",
                 "TotalPercent",
-                "YearlyIncrementPercent",
-                "MonthlyIncrementPercent",
-                "SpecialIncrementPercent",
+                "YearlyIncrement[%]",
+                "MonthlyIncrement[%]",
+                "SpecialIncrement[%]",
                 "MonthlySv",
                 "SpecialSv",
                 "MonthlyTax",
@@ -186,8 +186,8 @@ namespace GrossNet
                 "MonthlyNet",
                 "SpecialNet",
                 "YearlyNet/12",
-                "TotalPercent",
-                "YearlyIncrementPercent",
+                "Total[%]",
+                "YearlyIncrement[%]",
             };
             for (var i = 0; i < infos.Count; i++)
             {
@@ -214,7 +214,7 @@ namespace GrossNet
 
             var template = File.ReadAllText("README_TEMPLATE.md");
             var markdown = template.Replace("<table/>", outputSb.ToString());
-            File.WriteAllText("README.md", template);
+            File.WriteAllText("README.md", markdown);
         }
     }
 }
