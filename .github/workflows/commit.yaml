@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  build_config: Release
+
+jobs:
+  update_readme:
+    runs-on: windows-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      # setup runtime
+      - name: Install .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+
+      # publish program to root directory
+      - name: publish program
+        run: dotnet publish GrossNet --configuration Release -o . --no-self-contained
+      
+      # run program
+      - name: run program
+        run: GrossNet.exe
+
+      # push result
+      - name: push results
+        uses: test-room-7/action-update-file@v1
+        with:
+            file-path: |
+                README.md
+                RESULT.csv
+            commit-msg: update results
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      
