@@ -1,4 +1,4 @@
-YearlyGross,YearlyNet,YearlyNet/12,MonthlyGross,MonthlyNet,SpecialNet,TotalPercent,YearlyIncrementPercent,MonthlyIncrementPercent,SpecialIncrementPercent,MonthlySv,SpecialSv,MonthlyTax,SpecialTax
+YearlyGross,YearlyNet,YearlyNet/12,MonthlyGross,MonthlyNet,SpecialNet,TotalPercent,YearlyIncrement[%],MonthlyIncrement[%],SpecialIncrement[%],MonthlySv,SpecialSv,MonthlyTax,SpecialTax
 14000,11421,952,1000,819,798,82,81,82,78,181,171,0,31
 15400,12559,1047,1100,901,876,82,81,82,78,199,188,0,36
 16800,13540,1128,1200,969,953,81,70,69,78,217,205,13,41
