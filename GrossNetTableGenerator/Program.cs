@@ -214,7 +214,7 @@ namespace GrossNet
 
             var template = File.ReadAllText("README_TEMPLATE.md");
             var markdown = template.Replace("<table/>", outputSb.ToString());
-            File.WriteAllText("README.md", outputSb.ToString());
+            File.WriteAllText("README.md", template);
         }
     }
 }
